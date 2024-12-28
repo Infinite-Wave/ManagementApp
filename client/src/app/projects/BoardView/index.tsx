@@ -129,7 +129,7 @@ const Task = ({ task }: TaskProps) => {
     const [{ isDragging }, drag] = useDrag(() => ({
         type: "task",
         item: { id: task.id },
-        collect: (monitor: any) => ({
+        collect: (monitor) => ({
             isDragging: !!monitor.isDragging(),
         }),
     }));
